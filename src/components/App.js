@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Button} from 'reactstrap';
+import { Button, Spinner } from 'reactstrap';
 import Quotes from './Quotes'
 
 class App extends React.Component {
@@ -40,13 +40,18 @@ class App extends React.Component {
   render() {
     const { myQuote} = this.state;
     const { quote, author } = myQuote;
+    const spinner =         (
+      <div className="d-flex justify-content-center align-middle">
+        <Spinner color="primary" />
+      </div>
+    )
       return (
         <div className="container">
           <div className="d-flex justify-content-between">
             <Button
               className="my-3"
               color="success"
-              href="https://flafi.me"
+              href="https://flafi.me/#jscript"
             >
       Back to the website
             </Button>
@@ -58,7 +63,7 @@ class App extends React.Component {
       Repo
             </Button>
           </div>
-          {quote ? <Quotes handleClick={this.handleClick} quote={quote} author={author} /> : <div />}
+          {quote ? <Quotes handleClick={this.handleClick} quote={quote} author={author} /> : spinner}
           
         </div>
       );
