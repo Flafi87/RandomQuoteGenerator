@@ -1,23 +1,18 @@
-import React from 'react';
-import { Card, Button } from 'reactstrap';
-import PropTypes from 'prop-types';
+import React from "react";
+import { Card, Button } from "reactstrap";
+import PropTypes from "prop-types";
 
-const Quotes = ({quote, author, handleClick}) => {
-return(
+const Quotes = ({ quote, author, handleClick }) => (
   <Card id="quote-box">
     <div id="text">
       <h3>
-      &quot;
+        &quot;
         {quote}
-      &quot;
+        &quot;
       </h3>
-
     </div>
     <div id="author">
-      <h4>
--
-        {author}
-      </h4>
+      <h4>{author}</h4>
     </div>
     <div className="buttons">
       <a
@@ -27,23 +22,17 @@ return(
       >
         <i className="fa fa-twitter" />
       </a>
-      <Button
-        type="button"
-        id="new-quote"
-        onClick={handleClick
-        }
-      >
+      <Button type="button" id="new-quote" onClick={handleClick}>
         NEW QUOTE
       </Button>
     </div>
   </Card>
-)
-}
+);
 
 Quotes.propTypes = {
-    quote: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    handleClick: PropTypes.func.isRequired
-}
+  quote: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
+};
 
-export default Quotes
+export default Quotes;

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import { Button, Spinner } from 'reactstrap';
-import Quotes from './Quotes'
+import { Button, Spinner } from "reactstrap";
+import Quotes from "./Quotes";
 
 class App extends React.Component {
   constructor(props) {
@@ -29,44 +29,51 @@ class App extends React.Component {
       });
   };
 
-
   handleClick = () => {
-    const {quotes } = this.state;
+    const { quotes } = this.state;
     this.setState({
       myQuote: quotes[Math.floor(Math.random() * 102)]
-    })
-  }
+    });
+  };
 
   render() {
-    const { myQuote} = this.state;
+    const { myQuote } = this.state;
     const { quote, author } = myQuote;
-    const spinner =         (
+    const spinner = (
       <div className="d-flex justify-content-center align-middle">
         <Spinner color="primary" />
       </div>
-    )
-      return (
-        <div className="container">
-          <div className="d-flex justify-content-between">
-            <Button
-              className="my-3"
-              color="success"
-              href="https://flafi.me/#jscript"
-            >
-      Back to the website
-            </Button>
-            <Button
-              className="my-3"
-              color="primary"
-              href="https://github.com/Flafi87/RandomQuoteGenerator"
-            >
-      Repo
-            </Button>
-          </div>
-          {quote ? <Quotes handleClick={this.handleClick} quote={quote} author={author} /> : spinner}
-          
+    );
+    return (
+      <div className="container">
+        <div className="d-flex justify-content-between">
+          <Button
+            className="my-3"
+            color="success"
+            href="https://flafi.me/index.html#jscript"
+          >
+            Back to the website
+          </Button>
+          <Button
+            className="my-3"
+            color="primary"
+            href="https://github.com/Flafi87/RandomQuoteGenerator"
+            target="_blank"
+          >
+            Repo
+          </Button>
         </div>
-      );
+        {quote ? (
+          <Quotes
+            handleClick={this.handleClick}
+            quote={quote}
+            author={author}
+          />
+        ) : (
+          spinner
+        )}
+      </div>
+    );
   }
 }
 
