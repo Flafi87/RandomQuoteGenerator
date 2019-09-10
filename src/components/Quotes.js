@@ -4,14 +4,14 @@ import PropTypes from "prop-types";
 
 const Quotes = ({ quote, author, handleClick }) => (
   <Card id="quote-box">
-    <div id="text">
+    <div id="text" className="quote">
       <h3>
         &quot;
         {quote}
         &quot;
       </h3>
     </div>
-    <div id="author">
+    <div id="author" className="author">
       <h4>{author}</h4>
     </div>
     <div className="buttons">
@@ -20,7 +20,7 @@ const Quotes = ({ quote, author, handleClick }) => (
         id="tweet-quote"
         title="Tweet this quote!"
       >
-        <i className="fa fa-twitter" />
+        <i className="fab fa-twitter" />
       </a>
       <Button type="button" id="new-quote" onClick={handleClick}>
         NEW QUOTE

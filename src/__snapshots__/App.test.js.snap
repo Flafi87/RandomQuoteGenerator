@@ -42,119 +42,39 @@ exports[`App snapshot test testing App 1`] = `
 </div>
 `;
 
-exports[`My first snapshot test testing Quotes 1`] = `
-<div
-  className="card"
-  id="quote-box"
->
-  <div
-    id="text"
-  >
-    <h3>
-      "
-      "
-    </h3>
-  </div>
-  <div
-    id="author"
-  >
-    <h4 />
-  </div>
-  <div
-    className="buttons"
-  >
-    <a
-      href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=\\"undefined\\" undefined"
-      id="tweet-quote"
-      title="Tweet this quote!"
-    >
-      <i
-        className="fa fa-twitter"
-      />
-    </a>
-    <button
-      aria-label={null}
-      className="btn btn-secondary"
-      id="new-quote"
-      onClick={[Function]}
-      type="button"
-    >
-      NEW QUOTE
-    </button>
-  </div>
-</div>
-`;
-
-exports[`My second snapshot test testing App 1`] = `
-<div
-  className="container"
->
-  <div
-    className="d-flex justify-content-between"
-  >
-    <a
-      aria-label={null}
-      className="my-3 btn btn-success"
-      href="https://flafi.me/index.html#jscript"
-      onClick={[Function]}
-    >
-      Back to the website
-    </a>
-    <a
-      aria-label={null}
-      className="my-3 btn btn-primary"
-      href="https://github.com/Flafi87/RandomQuoteGenerator"
-      onClick={[Function]}
-      target="_blank"
-    >
-      Repo
-    </a>
-  </div>
-  <div
-    className="d-flex justify-content-center align-middle"
-  >
-    <div
-      className="spinner-border text-primary"
-      role="status"
-    >
-      <span
-        className="sr-only"
-      >
-        Loading...
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Quotes snapshot test testing Quotes 1`] = `
 <div
   className="card"
   id="quote-box"
 >
   <div
+    className="quote"
     id="text"
   >
     <h3>
       "
+      something something
       "
     </h3>
   </div>
   <div
+    className="author"
     id="author"
   >
-    <h4 />
+    <h4>
+      Valaki
+    </h4>
   </div>
   <div
     className="buttons"
   >
     <a
-      href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=\\"undefined\\" undefined"
+      href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=\\"something something\\" Valaki"
       id="tweet-quote"
       title="Tweet this quote!"
     >
       <i
-        className="fa fa-twitter"
+        className="fab fa-twitter"
       />
     </a>
     <button
