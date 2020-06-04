@@ -63,12 +63,20 @@ class App extends React.Component {
             Repo
           </Button>
         </div>
+
         {quote ? (
-          <Quotes
-            handleClick={this.handleClick}
-            quote={quote}
-            author={author}
-          />
+          <>
+            <div className="d-flex justify-content-center align-middle">
+              <Button type="button" id="new-quote" onClick={this.handleClick}>
+                NEW QUOTE
+              </Button>
+            </div>
+            <Quotes
+              handleClick={this.handleClick}
+              quote={quote}
+              author={author}
+            />
+          </>
         ) : (
           spinner
         )}

@@ -1,20 +1,20 @@
 import React from "react";
-import { Card, Button } from "reactstrap";
+import { Card } from "reactstrap";
 import PropTypes from "prop-types";
 
-const Quotes = ({ quote, author, handleClick }) => (
+const Quotes = ({ quote, author }) => (
   <Card id="quote-box">
     <div id="text">
-      <h3>
+      <p>
         &quot;
         {quote}
         &quot;
-      </h3>
+      </p>
     </div>
     <div id="author">
       <h4>{author}</h4>
     </div>
-    <div className="buttons">
+    {/* <div className="buttons">
       <a
         href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="${quote}" ${author}`}
         id="tweet-quote"
@@ -22,17 +22,13 @@ const Quotes = ({ quote, author, handleClick }) => (
       >
         <i className="fa fa-twitter" />
       </a>
-      <Button type="button" id="new-quote" onClick={handleClick}>
-        NEW QUOTE
-      </Button>
-    </div>
+    </div> */}
   </Card>
 );
 
 Quotes.propTypes = {
   quote: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired
+  author: PropTypes.string.isRequired
 };
 
 export default Quotes;
