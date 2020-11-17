@@ -50,7 +50,7 @@ class App extends React.Component {
           <Button
             className="my-3"
             color="success"
-            href="https://flafi.me/index.html#jscript"
+            href="https://flafi.hu/index.html#jscript"
           >
             Back to the website
           </Button>
